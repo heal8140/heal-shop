@@ -1,3 +1,7 @@
+/* =========================
+   基本設定
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -9,15 +13,17 @@ html {
 body {
   margin: 0;
   font-family:
-    "Noto Sans JP",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
     Meiryo,
     sans-serif;
 
-  color: #333;
-  background: #fff;
-  line-height: 1.8;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.7;
 }
 
 a {
@@ -26,282 +32,279 @@ a {
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 
-/* -------------------------
- header
-------------------------- */
+/* =========================
+   ヘッダー
+========================= */
 
 .site-header {
-  background: rgba(255,255,255,0.96);
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: #ffffff;
+  border-bottom: 1px solid #eeeeee;
 }
 
 .header-inner {
-  max-width: 1200px;
-  margin: auto;
-  min-height: 72px;
-  padding: 0 24px;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  min-height: 82px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
   font-size: 20px;
+  font-weight: 500;
   letter-spacing: 0.12em;
-  font-weight: 600;
 }
 
 nav {
   display: flex;
-  gap: 28px;
+  gap: 34px;
 }
 
 nav a {
-  font-size: 13px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #555;
 }
 
 nav a:hover {
-  opacity: 0.55;
+  color: #000;
 }
 
 
-/* -------------------------
- hero
-------------------------- */
+/* =========================
+   メインビジュアル
+========================= */
 
 .hero {
-  min-height: 530px;
-
-  display: flex;
-  align-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #f7faf8,
-      #f1f7f4
-    );
+  background: #f7f7f5;
 }
 
 .hero-inner {
-  max-width: 1100px;
-  width: 100%;
-  margin: auto;
-  padding: 80px 24px;
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 85px 0 90px;
+  text-align: center;
 }
 
 .hero-sub {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  color: #80958a;
+  margin: 0 0 14px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #999;
 }
 
 .hero h1 {
-  margin: 15px 0 20px;
-  font-size: clamp(34px, 5vw, 60px);
-  font-weight: 500;
-  line-height: 1.45;
+  margin: 0;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 .hero-text {
-  color: #666;
-  margin-bottom: 35px;
+  margin: 22px 0 30px;
+  font-size: 14px;
+  color: #777;
 }
 
 .main-button {
   display: inline-block;
+  padding: 13px 34px;
 
-  background: #667e72;
-  color: #fff;
+  border: 1px solid #222;
 
-  padding: 14px 35px;
-  border-radius: 50px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
 
-  font-size: 14px;
-  letter-spacing: 0.08em;
-
-  transition: 0.25s;
+  transition: 0.2s;
 }
 
 .main-button:hover {
-  opacity: 0.8;
+  background: #222;
+  color: #fff;
 }
 
 
-/* -------------------------
- common section
-------------------------- */
+/* =========================
+   セクション
+========================= */
 
 .section {
-  padding: 100px 24px;
+  padding: 90px 0;
 }
 
 .section-inner {
-  max-width: 1150px;
-  margin: auto;
+  width: min(1180px, 92%);
+  margin: 0 auto;
 }
 
 .section-inner.small {
-  max-width: 800px;
+  width: min(760px, 88%);
 }
 
 .section-label {
-  font-size: 12px;
-  color: #85978e;
-  letter-spacing: 0.18em;
-  margin-bottom: 5px;
+  margin: 0 0 7px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: #999;
 }
 
 .section h2 {
   margin: 0 0 50px;
-  font-size: 31px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 .gray-section {
-  background: #f8f9f8;
+  background: #f8f8f7;
 }
 
 
-/* -------------------------
- product list
-------------------------- */
+/* =========================
+   商品一覧
+========================= */
 
 .product-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(3, 1fr);
-
-  gap: 35px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px 30px;
 }
 
 .product-card {
   display: block;
-  background: #fff;
-
-  border: 1px solid #eee;
-
-  transition:
-    transform 0.25s,
-    box-shadow 0.25s;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 12px 30px
-    rgba(0,0,0,0.08);
 }
 
 .product-image {
+  width: 100%;
   aspect-ratio: 1 / 1;
-  background: #f5f5f5;
+
+  background: #f4f4f4;
   overflow: hidden;
 }
 
 .product-image img {
+  width: 100%;
   height: 100%;
   object-fit: cover;
+
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.025);
 }
 
 .product-info {
-  padding: 23px;
+  padding-top: 18px;
 }
 
 .product-info h3 {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
 
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .product-short {
-  color: #777;
-  font-size: 13px;
-  min-height: 48px;
+  margin: 0 0 13px;
+
+  font-size: 12px;
+  color: #888;
+  line-height: 1.7;
 }
 
 .price {
-  margin-top: 20px;
-  font-size: 19px;
-  font-weight: 500;
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .price span {
-  font-size: 11px;
-  font-weight: normal;
-  color: #888;
   margin-left: 3px;
+
+  font-size: 10px;
+  color: #999;
 }
 
 .detail-link {
-  display: block;
-  margin-top: 18px;
+  display: inline-block;
 
-  font-size: 12px;
-  color: #72857c;
+  margin-top: 12px;
+
+  font-size: 11px;
+  color: #888;
+
+  border-bottom: 1px solid #bbb;
 }
 
 
-/* -------------------------
- about / guide
-------------------------- */
+/* =========================
+   ABOUT
+========================= */
 
 .normal-text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 2.2;
   color: #666;
 }
+
+
+/* =========================
+   GUIDE
+========================= */
 
 .guide-box {
   border-top: 1px solid #ddd;
 }
 
 .guide-box h3 {
-  font-size: 16px;
+  margin: 32px 0 8px;
 
-  margin:
-    35px 0 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .guide-box p {
-  color: #666;
-  font-size: 14px;
+  margin: 0;
+
+  font-size: 13px;
+  color: #777;
 }
 
 
-/* -------------------------
- product detail
-------------------------- */
+/* =========================
+   商品詳細
+========================= */
 
 .product-detail {
-  padding: 90px 24px 70px;
+  padding: 80px 0 70px;
 }
 
 .product-detail-inner {
-  max-width: 1100px;
-  margin: auto;
+  width: min(1080px, 92%);
+  margin: 0 auto;
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.05fr 0.95fr;
 
   gap: 70px;
-
   align-items: start;
 }
 
 .detail-image {
-  background: #f6f6f6;
+  background: #f5f5f5;
 }
 
 .detail-image img {
@@ -310,45 +313,46 @@ nav a:hover {
 }
 
 .detail-info {
-  padding-top: 20px;
+  padding-top: 15px;
 }
 
 .detail-category {
-  color: #87978f;
+  margin: 0 0 12px;
 
-  font-size: 12px;
-  letter-spacing: 0.15em;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: #aaa;
 }
 
 .detail-info h1 {
-  font-size: 30px;
+  margin: 0 0 17px;
 
-  font-weight: 500;
-  line-height: 1.6;
-
-  margin:
-    10px 0 15px;
+  font-size: 25px;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
 .detail-price {
-  font-size: 25px;
-  margin-bottom: 30px;
+  margin: 0 0 28px;
+
+  font-size: 22px;
 }
 
 .detail-price span {
-  font-size: 12px;
-  color: #777;
+  margin-left: 3px;
+
+  font-size: 11px;
+  color: #999;
 }
 
 .detail-intro {
+  padding-top: 24px;
+
+  border-top: 1px solid #eee;
+
+  font-size: 13px;
+  line-height: 2;
   color: #666;
-
-  border-top:
-    1px solid #eee;
-
-  padding-top: 25px;
-
-  margin-bottom: 35px;
 }
 
 .buy-button {
@@ -356,41 +360,40 @@ nav a:hover {
 
   width: 100%;
 
-  padding: 17px;
+  margin-top: 34px;
+  padding: 16px;
+
+  background: #222;
+  color: #fff;
 
   text-align: center;
 
-  background: #667e72;
-  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.12em;
 
-  font-size: 15px;
-
-  border-radius: 4px;
-
-  transition: 0.25s;
+  transition: 0.2s;
 }
 
 .buy-button:hover {
-  opacity: 0.8;
+  background: #555;
 }
 
 .stripe-note {
+  margin-top: 9px;
+
   text-align: center;
 
-  color: #999;
-
-  font-size: 11px;
-
-  margin-top: 10px;
+  font-size: 10px;
+  color: #aaa;
 }
 
 
-/* -------------------------
- description
-------------------------- */
+/* =========================
+   商品説明
+========================= */
 
 .detail-description {
-  padding: 30px 24px 100px;
+  padding: 30px 0 100px;
 }
 
 .description-box {
@@ -398,107 +401,106 @@ nav a:hover {
 }
 
 .description-box h3 {
-  font-size: 17px;
+  margin: 35px 0 8px;
 
-  margin:
-    40px 0 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .description-box p {
-  font-size: 14px;
-  color: #666;
+  margin: 0;
 
-  white-space: pre-line;
+  font-size: 13px;
+  color: #666;
+  line-height: 2;
 }
 
 .back-link {
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 .back-link a {
-  font-size: 13px;
-  color: #71857b;
+  font-size: 12px;
+  color: #777;
 }
 
 
-/* -------------------------
- footer
-------------------------- */
+/* =========================
+   フッター
+========================= */
 
 footer {
-  padding: 35px 20px;
-
-  text-align: center;
+  padding: 45px 20px;
 
   border-top: 1px solid #eee;
 
-  color: #999;
+  text-align: center;
+}
 
-  font-size: 11px;
+footer p {
+  margin: 0;
+
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #aaa;
 }
 
 
-/* -------------------------
- smartphone
-------------------------- */
+/* =========================
+   スマホ
+========================= */
 
 @media (max-width: 768px) {
 
   .header-inner {
-    min-height: 65px;
-    padding: 0 17px;
+    min-height: 66px;
   }
 
   .logo {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   nav {
-    gap: 13px;
+    gap: 14px;
   }
 
   nav a {
-    font-size: 10px;
-  }
-
-
-  .hero {
-    min-height: 430px;
+    font-size: 9px;
   }
 
   .hero-inner {
-    padding:
-      60px 22px;
+    padding: 65px 0 70px;
   }
 
+  .hero h1 {
+    font-size: 29px;
+  }
 
   .section {
-    padding:
-      70px 18px;
+    padding: 65px 0;
   }
 
   .section h2 {
-    font-size: 26px;
-
     margin-bottom: 35px;
+    font-size: 22px;
   }
-
 
   .product-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 45px;
   }
 
+  .product-info {
+    padding-top: 14px;
+  }
 
   .product-detail {
-    padding:
-      35px 18px
-      50px;
+    padding: 30px 0 55px;
   }
 
   .product-detail-inner {
     grid-template-columns: 1fr;
-    gap: 25px;
+    gap: 28px;
   }
 
   .detail-info {
@@ -506,17 +508,11 @@ footer {
   }
 
   .detail-info h1 {
-    font-size: 23px;
-  }
-
-  .detail-price {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .detail-description {
-    padding:
-      20px 18px
-      70px;
+    padding: 10px 0 70px;
   }
 
 }
