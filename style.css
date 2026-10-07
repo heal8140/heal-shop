@@ -1214,3 +1214,46 @@ footer {
   aspect-ratio: auto;
   object-fit: contain;
 }
+/* ========================================
+   HI-GENKIシリーズ専用 商品詳細画像
+======================================== */
+
+.hi-genki-image {
+  background: #FAF8F3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+}
+
+.hi-genki-image img {
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  aspect-ratio: auto;
+
+  object-fit: contain;
+
+  margin: 0 auto;
+}
+
+
+/* スマホ */
+@media (max-width: 768px) {
+
+  .hi-genki-image {
+    padding: 10px;
+  }
+
+  .hi-genki-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+
+}
