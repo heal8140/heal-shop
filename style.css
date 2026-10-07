@@ -1198,3 +1198,19 @@ footer {
   object-fit: contain;
   aspect-ratio: auto;
 }
+.detail-image {
+  background: #FAF8F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.detail-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
