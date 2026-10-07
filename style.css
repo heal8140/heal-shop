@@ -1180,3 +1180,21 @@ footer {
   margin: 0 auto;
   padding-top: 18px;
 }
+/* 商品詳細画像を高画質のまま表示 */
+.detail-image {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.detail-image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 700px;
+
+  object-fit: contain;
+  aspect-ratio: auto;
+}
