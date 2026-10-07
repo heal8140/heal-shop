@@ -1161,3 +1161,22 @@ footer {
 .buy-button:hover {
   background: #A78A5B;
 }
+
+/* 商品画像を少し小さく */
+.product-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  gap: 50px 42px;
+}
+
+.product-image {
+  width: 88%;
+  margin: 0 auto;
+  aspect-ratio: 1 / 1;
+}
+
+.product-info {
+  width: 88%;
+  margin: 0 auto;
+  padding-top: 18px;
+}
