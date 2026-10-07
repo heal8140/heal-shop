@@ -995,3 +995,169 @@ footer p {
   }
 
 }
+
+/* =========================
+   heal Luxury Color Override
+========================= */
+
+body {
+  background: #FAF8F3;
+  color: #292520;
+}
+
+.site-header {
+  background: rgba(250, 248, 243, 0.96);
+  border-bottom: 1px solid #E8E1D5;
+}
+
+.brand-main {
+  color: #292520;
+}
+
+.brand-sub,
+nav a {
+  color: #746B60;
+}
+
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(
+      circle at 78% 30%,
+      rgba(190, 163, 114, 0.20),
+      transparent 26%
+    ),
+    linear-gradient(
+      135deg,
+      #FBF9F5 0%,
+      #F3EEE4 55%,
+      #E9DFCF 100%
+    );
+}
+
+.hero-label {
+  color: #A78A5B;
+}
+
+.hero h1 {
+  color: #292520;
+}
+
+.hero-ja {
+  color: #675F55;
+}
+
+.hero-button {
+  background: #292520;
+  color: #FFFFFF;
+  border: 1px solid #292520;
+}
+
+.hero-button:hover {
+  background: #A78A5B;
+  border-color: #A78A5B;
+}
+
+
+/* ITEMS */
+
+.items-section {
+  background: #FAF8F3;
+}
+
+.section-en,
+.product-category {
+  color: #A78A5B;
+}
+
+.section-heading h2 {
+  color: #292520;
+}
+
+.section-note {
+  color: #837A70;
+}
+
+.product-image {
+  background: #EFE9DF;
+}
+
+.product-info h3 {
+  color: #302B26;
+}
+
+.product-short {
+  color: #81786D;
+}
+
+.product-bottom {
+  border-top: 1px solid #DDD4C8;
+}
+
+.price {
+  color: #302B26;
+}
+
+.view-detail {
+  color: #9A7C50;
+}
+
+
+/* ABOUT */
+
+.about-section {
+  background: #302B26;
+  color: #F7F2E9;
+}
+
+.about-text p {
+  color: #D6CEC2;
+}
+
+
+/* GUIDE */
+
+.guide-section {
+  background: #F0EADF;
+}
+
+.guide-list {
+  border-top: 1px solid #CFC4B5;
+}
+
+.guide-item {
+  border-bottom: 1px solid #D8CFC3;
+}
+
+.guide-number {
+  color: #A78A5B;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: #211E1A;
+}
+
+
+/* DETAIL PAGE */
+
+.product-detail,
+.detail-description {
+  background: #FAF8F3;
+}
+
+.detail-image {
+  background: #EFE9DF;
+}
+
+.buy-button {
+  background: #302B26;
+}
+
+.buy-button:hover {
+  background: #A78A5B;
+}
