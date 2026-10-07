@@ -1,5 +1,5 @@
 /* =========================
-   基本設定
+   RESET
 ========================= */
 
 * {
@@ -12,18 +12,18 @@ html {
 
 body {
   margin: 0;
+
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
     "Hiragino Kaku Gothic ProN",
     "Yu Gothic",
+    "Noto Sans JP",
     Meiryo,
     sans-serif;
 
-  background: #ffffff;
-  color: #222;
-  line-height: 1.7;
+  color: #201f1d;
+  background: #fdfcf9;
+
+  line-height: 1.8;
 }
 
 a {
@@ -32,150 +32,325 @@ a {
 }
 
 img {
+  width: 100%;
   display: block;
+}
+
+.sp-only {
+  display: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(253, 252, 249, 0.94);
+  backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.header-inner {
+  width: min(1240px, 92%);
+  min-height: 88px;
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1.05;
+}
+
+.brand-main {
+  font-family:
+    "Times New Roman",
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 31px;
+  letter-spacing: 0.12em;
+}
+
+.brand-sub {
+  margin-top: 5px;
+
+  font-size: 8px;
+  letter-spacing: 0.32em;
+
+  color: #827a70;
+}
+
+nav {
+  display: flex;
+  gap: 38px;
+}
+
+nav a {
+  position: relative;
+
+  font-size: 10px;
+  letter-spacing: 0.22em;
+
+  color: #5d5851;
+
+  padding-bottom: 5px;
+}
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 1px;
+
+  background: #9a8155;
+
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
   width: 100%;
 }
 
 
 /* =========================
-   ヘッダー
-========================= */
-
-.site-header {
-  background: #ffffff;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.header-inner {
-  width: min(1180px, 92%);
-  margin: 0 auto;
-  min-height: 82px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-}
-
-nav {
-  display: flex;
-  gap: 34px;
-}
-
-nav a {
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  color: #555;
-}
-
-nav a:hover {
-  color: #000;
-}
-
-
-/* =========================
-   メインビジュアル
+   HERO
 ========================= */
 
 .hero {
-  background: #f7f7f5;
+  position: relative;
+
+  min-height: 620px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 73% 34%,
+      rgba(193, 177, 145, 0.22),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #f9f6ef 0%,
+      #f4f1e9 48%,
+      #eae4d8 100%
+    );
 }
 
-.hero-inner {
-  width: min(1180px, 92%);
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  right: -70px;
+  top: 40px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(154, 129, 85, 0.17);
+}
+
+.hero-overlay {
+  position: absolute;
+
+  right: 13%;
+  top: 15%;
+
+  width: 280px;
+  height: 370px;
+
+  border:
+    1px solid
+    rgba(154, 129, 85, 0.35);
+
+  transform: rotate(8deg);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+
+  width: min(1120px, 88%);
+
   margin: 0 auto;
-  padding: 85px 0 90px;
-  text-align: center;
 }
 
-.hero-sub {
-  margin: 0 0 14px;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: #999;
+.hero-label {
+  margin: 0 0 22px;
+
+  font-size: 10px;
+  letter-spacing: 0.35em;
+
+  color: #9a8155;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(30px, 4vw, 46px);
-  line-height: 1.55;
+
+  font-family:
+    "Times New Roman",
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: clamp(48px, 6vw, 78px);
+
+  line-height: 1.15;
+
   font-weight: 400;
-  letter-spacing: 0.05em;
+
+  letter-spacing: 0.01em;
 }
 
-.hero-text {
-  margin: 22px 0 30px;
-  font-size: 14px;
-  color: #777;
+.hero-ja {
+  margin: 28px 0 38px;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 15px;
+
+  line-height: 2;
+
+  color: #5f5a53;
 }
 
-.main-button {
-  display: inline-block;
-  padding: 13px 34px;
+.hero-button {
+  display: inline-flex;
 
-  border: 1px solid #222;
+  justify-content: center;
+  align-items: center;
 
-  font-size: 12px;
-  letter-spacing: 0.12em;
+  min-width: 190px;
 
-  transition: 0.2s;
+  padding: 15px 24px;
+
+  border:
+    1px solid
+    #292725;
+
+  font-size: 9px;
+
+  letter-spacing: 0.24em;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
 }
 
-.main-button:hover {
-  background: #222;
+.hero-button:hover {
+  background: #292725;
   color: #fff;
 }
 
 
 /* =========================
-   セクション
+   COMMON
 ========================= */
 
 .section {
-  padding: 90px 0;
+  padding: 120px 0;
 }
 
 .section-inner {
-  width: min(1180px, 92%);
+  width: min(1200px, 90%);
+
   margin: 0 auto;
 }
 
 .section-inner.small {
-  width: min(760px, 88%);
+  width: min(850px, 88%);
 }
 
-.section-label {
+.section-en {
   margin: 0 0 7px;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  color: #999;
+
+  font-size: 9px;
+
+  letter-spacing: 0.3em;
+
+  color: #a18a61;
 }
 
-.section h2 {
-  margin: 0 0 50px;
-  font-size: 25px;
-  font-weight: 400;
-  letter-spacing: 0.05em;
-}
-
-.gray-section {
-  background: #f8f8f7;
+.section-en.light {
+  color: #c7b38e;
 }
 
 
 /* =========================
-   商品一覧
+   ITEMS
 ========================= */
+
+.items-section {
+  background: #fdfcf9;
+}
+
+.section-heading {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 58px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-family:
+    "Times New Roman",
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.section-note {
+  margin: 0 0 5px;
+
+  font-size: 11px;
+
+  color: #8d877f;
+}
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px 30px;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 60px 34px;
 }
 
 .product-card {
@@ -183,68 +358,127 @@ nav a:hover {
 }
 
 .product-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  position: relative;
 
-  background: #f4f4f4;
+  aspect-ratio: 4 / 5;
+
+  background: #f1eee8;
+
   overflow: hidden;
+}
+
+.product-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  border:
+    1px solid
+    rgba(0, 0, 0, 0.04);
+
+  pointer-events: none;
 }
 
 .product-image img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 
-  transition: transform 0.35s ease;
+  transition:
+    transform 0.7s
+    cubic-bezier(.2,.6,.2,1);
 }
 
-.product-card:hover .product-image img {
-  transform: scale(1.025);
+.product-card:hover
+.product-image img {
+  transform: scale(1.035);
 }
 
 .product-info {
-  padding-top: 18px;
+  padding-top: 22px;
+}
+
+.product-category {
+  margin: 0 0 8px;
+
+  font-size: 8px;
+
+  letter-spacing: 0.25em;
+
+  color: #a18a61;
 }
 
 .product-info h3 {
-  margin: 0 0 8px;
+  margin: 0;
 
-  font-size: 15px;
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 18px;
+
   font-weight: 400;
-  line-height: 1.6;
+
+  line-height: 1.65;
 }
 
 .product-short {
-  margin: 0 0 13px;
+  margin: 12px 0 18px;
 
-  font-size: 12px;
-  color: #888;
-  line-height: 1.7;
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  color: #817c75;
+}
+
+.product-bottom {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 15px;
+
+  border-top:
+    1px solid
+    #dfdbd3;
 }
 
 .price {
   margin: 0;
 
-  font-size: 15px;
-  font-weight: 400;
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  letter-spacing: 0.05em;
 }
 
 .price span {
-  margin-left: 3px;
+  margin-left: 4px;
 
-  font-size: 10px;
-  color: #999;
+  font-family:
+    sans-serif;
+
+  font-size: 8px;
+
+  letter-spacing: 0.08em;
+
+  color: #9a958e;
 }
 
-.detail-link {
-  display: inline-block;
+.view-detail {
+  font-size: 8px;
 
-  margin-top: 12px;
+  letter-spacing: 0.25em;
 
-  font-size: 11px;
-  color: #888;
-
-  border-bottom: 1px solid #bbb;
+  color: #70685e;
 }
 
 
@@ -252,12 +486,55 @@ nav a:hover {
    ABOUT
 ========================= */
 
-.normal-text {
-  margin: 0;
+.about-section {
+  background: #242321;
 
-  font-size: 14px;
+  color: #f4f0e7;
+
+  padding: 120px 0;
+}
+
+.about-inner {
+  width: min(1050px, 88%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 120px;
+
+  align-items: center;
+}
+
+.about-title h2 {
+  margin: 15px 0 0;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 48px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+.about-text p {
+  margin: 0 0 25px;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 13px;
+
   line-height: 2.2;
-  color: #666;
+
+  color: #cbc5bb;
 }
 
 
@@ -265,242 +542,448 @@ nav a:hover {
    GUIDE
 ========================= */
 
-.guide-box {
-  border-top: 1px solid #ddd;
+.guide-section {
+  background: #f5f1e9;
 }
 
-.guide-box h3 {
-  margin: 32px 0 8px;
+.guide-title {
+  margin: 7px 0 45px;
 
-  font-size: 14px;
-  font-weight: 500;
-}
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
 
-.guide-box p {
-  margin: 0;
+  font-size: 28px;
 
-  font-size: 13px;
-  color: #777;
-}
-
-
-/* =========================
-   商品詳細
-========================= */
-
-.product-detail {
-  padding: 80px 0 70px;
-}
-
-.product-detail-inner {
-  width: min(1080px, 92%);
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-
-  gap: 70px;
-  align-items: start;
-}
-
-.detail-image {
-  background: #f5f5f5;
-}
-
-.detail-image img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
-.detail-info {
-  padding-top: 15px;
-}
-
-.detail-category {
-  margin: 0 0 12px;
-
-  font-size: 10px;
-  letter-spacing: 0.18em;
-  color: #aaa;
-}
-
-.detail-info h1 {
-  margin: 0 0 17px;
-
-  font-size: 25px;
-  line-height: 1.7;
   font-weight: 400;
 }
 
-.detail-price {
-  margin: 0 0 28px;
-
-  font-size: 22px;
+.guide-list {
+  border-top:
+    1px solid
+    #cec7bb;
 }
 
-.detail-price span {
-  margin-left: 3px;
+.guide-item {
+  display: grid;
 
-  font-size: 11px;
-  color: #999;
+  grid-template-columns:
+    80px 1fr;
+
+  gap: 20px;
+
+  padding: 30px 0;
+
+  border-bottom:
+    1px solid
+    #d8d1c6;
 }
 
-.detail-intro {
-  padding-top: 24px;
+.guide-number {
+  font-family:
+    "Times New Roman",
+    serif;
 
-  border-top: 1px solid #eee;
+  font-size: 18px;
 
-  font-size: 13px;
-  line-height: 2;
-  color: #666;
+  color: #a18a61;
 }
 
-.buy-button {
-  display: block;
-
-  width: 100%;
-
-  margin-top: 34px;
-  padding: 16px;
-
-  background: #222;
-  color: #fff;
-
-  text-align: center;
-
-  font-size: 13px;
-  letter-spacing: 0.12em;
-
-  transition: 0.2s;
-}
-
-.buy-button:hover {
-  background: #555;
-}
-
-.stripe-note {
-  margin-top: 9px;
-
-  text-align: center;
-
-  font-size: 10px;
-  color: #aaa;
-}
-
-
-/* =========================
-   商品説明
-========================= */
-
-.detail-description {
-  padding: 30px 0 100px;
-}
-
-.description-box {
-  border-top: 1px solid #ddd;
-}
-
-.description-box h3 {
-  margin: 35px 0 8px;
+.guide-item h3 {
+  margin: 0 0 7px;
 
   font-size: 14px;
+
   font-weight: 500;
 }
 
-.description-box p {
+.guide-item p {
   margin: 0;
 
-  font-size: 13px;
-  color: #666;
-  line-height: 2;
-}
-
-.back-link {
-  margin-top: 55px;
-}
-
-.back-link a {
   font-size: 12px;
-  color: #777;
+
+  color: #777168;
 }
 
 
 /* =========================
-   フッター
+   FOOTER
 ========================= */
 
 footer {
-  padding: 45px 20px;
+  background: #171715;
 
-  border-top: 1px solid #eee;
+  color: #cfc9bd;
+}
 
-  text-align: center;
+.footer-inner {
+  width: min(1200px, 90%);
+
+  min-height: 160px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand span {
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 28px;
+
+  letter-spacing: 0.12em;
+}
+
+.footer-brand small {
+  margin-top: 3px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.3em;
+
+  color: #8e887e;
 }
 
 footer p {
   margin: 0;
 
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: #aaa;
+  font-size: 8px;
+
+  letter-spacing: 0.15em;
+
+  color: #7c776f;
 }
 
 
 /* =========================
-   スマホ
+   PRODUCT DETAIL
+========================= */
+
+.product-detail {
+  padding: 90px 0 70px;
+
+  background: #fdfcf9;
+}
+
+.product-detail-inner {
+  width: min(1100px, 90%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    1.08fr 0.92fr;
+
+  gap: 80px;
+}
+
+.detail-image {
+  background: #f1eee8;
+}
+
+.detail-image img {
+  aspect-ratio: 4 / 5;
+
+  object-fit: cover;
+}
+
+.detail-info {
+  padding-top: 25px;
+}
+
+.detail-category {
+  margin: 0 0 12px;
+
+  font-size: 9px;
+
+  letter-spacing: 0.28em;
+
+  color: #a18a61;
+}
+
+.detail-info h1 {
+  margin: 0 0 18px;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 30px;
+
+  line-height: 1.6;
+
+  font-weight: 400;
+}
+
+.detail-price {
+  margin: 0 0 30px;
+
+  font-family:
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+}
+
+.detail-price span {
+  margin-left: 5px;
+
+  font-family:
+    sans-serif;
+
+  font-size: 10px;
+
+  color: #999188;
+}
+
+.detail-intro {
+  padding-top: 28px;
+
+  border-top:
+    1px solid
+    #ddd7cd;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 13px;
+
+  line-height: 2;
+
+  color: #68625b;
+}
+
+.buy-button {
+  display: block;
+
+  margin-top: 38px;
+
+  padding: 17px 20px;
+
+  background: #242321;
+
+  color: #fff;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  letter-spacing: 0.22em;
+
+  transition: 0.25s;
+}
+
+.buy-button:hover {
+  background: #9a8155;
+}
+
+.stripe-note {
+  margin-top: 10px;
+
+  text-align: center;
+
+  font-size: 9px;
+
+  color: #a09a92;
+}
+
+
+/* =========================
+   DETAIL DESCRIPTION
+========================= */
+
+.detail-description {
+  padding: 20px 0 100px;
+
+  background: #fdfcf9;
+}
+
+.description-box {
+  border-top:
+    1px solid
+    #d8d2c8;
+}
+
+.description-box h3 {
+  margin: 36px 0 8px;
+
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 16px;
+
+  font-weight: 400;
+}
+
+.description-box p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 2;
+
+  color: #706a63;
+}
+
+.back-link {
+  margin-top: 60px;
+}
+
+.back-link a {
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+
+  color: #827a70;
+}
+
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
-  .header-inner {
-    min-height: 66px;
+  .sp-only {
+    display: block;
   }
 
-  .logo {
-    font-size: 15px;
+
+  .header-inner {
+    min-height: 70px;
+  }
+
+  .brand-main {
+    font-size: 24px;
   }
 
   nav {
-    gap: 14px;
+    gap: 15px;
   }
 
   nav a {
-    font-size: 9px;
+    font-size: 8px;
   }
 
-  .hero-inner {
-    padding: 65px 0 70px;
+
+  .hero {
+    min-height: 540px;
+  }
+
+  .hero::after {
+    width: 320px;
+    height: 320px;
+
+    right: -120px;
+    top: 70px;
+  }
+
+  .hero-overlay {
+    width: 170px;
+    height: 240px;
+
+    right: 5%;
+    top: 26%;
+  }
+
+  .hero-content {
+    width: 86%;
   }
 
   .hero h1 {
-    font-size: 29px;
+    font-size: 42px;
   }
+
+  .hero-ja {
+    font-size: 13px;
+  }
+
 
   .section {
-    padding: 65px 0;
+    padding: 80px 0;
   }
 
-  .section h2 {
-    margin-bottom: 35px;
-    font-size: 22px;
+  .section-heading {
+    display: block;
+
+    margin-bottom: 38px;
   }
+
+  .section-heading h2 {
+    font-size: 31px;
+  }
+
+  .section-note {
+    margin-top: 12px;
+  }
+
 
   .product-grid {
     grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+
+  .about-section {
+    padding: 85px 0;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+
     gap: 45px;
   }
 
-  .product-info {
-    padding-top: 14px;
+  .about-title h2 {
+    font-size: 39px;
   }
 
+
+  .guide-item {
+    grid-template-columns:
+      45px 1fr;
+  }
+
+
+  .footer-inner {
+    min-height: 140px;
+
+    display: block;
+
+    padding: 38px 0;
+  }
+
+  footer p {
+    margin-top: 28px;
+  }
+
+
   .product-detail {
-    padding: 30px 0 55px;
+    padding: 35px 0 60px;
   }
 
   .product-detail-inner {
     grid-template-columns: 1fr;
-    gap: 28px;
+
+    gap: 30px;
   }
 
   .detail-info {
@@ -508,11 +991,7 @@ footer p {
   }
 
   .detail-info h1 {
-    font-size: 21px;
-  }
-
-  .detail-description {
-    padding: 10px 0 70px;
+    font-size: 24px;
   }
 
 }
