@@ -1,0 +1,233 @@
+[
+  {
+    "id": "product1",
+    "name": "CHOTAN WATER 高濃度1万倍(チョタンウォーター高濃度1万倍)",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 19800,
+    "price": 19000,
+    "image": "images/product1.jpeg",
+    "detailImage": "images/product1.jpeg",
+    "detailImageClass": "",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product2",
+    "name": "酵素生成水ドクターソルフェジオ(ノーマル)",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11800,
+    "price": 11000,
+    "image": "images/product2.jpeg",
+    "detailImage": "images/product2.jpeg",
+    "detailImageClass": "",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品2についての短い紹介文を入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "商品2の詳しい説明をここに入れます。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "使用方法を記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "注意事項を記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product3",
+    "name": "酵素生成水ドクターソルフェジオ(高濃度)",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 15800,
+    "price": 14000,
+    "image": "images/product3.jpg",
+    "detailImage": "images/product3.jpg",
+    "detailImageClass": "",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品3についての短い紹介文を入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "商品3の詳しい説明をここに入れます。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "使用方法を記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "注意事項を記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product4",
+    "name": "HI-GENKI ビフィズス",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11664,
+    "price": 11664,
+    "image": "images/product4.jpg",
+    "detailImage": "images/product4-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product5",
+    "name": "HI-GENKI スピルリナ",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 5832,
+    "price": 5832,
+    "image": "images/product5.jpg",
+    "detailImage": "images/product5-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product6",
+    "name": "HI-GENKI F100",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 5832,
+    "price": 5832,
+    "image": "images/product6.jpg",
+    "detailImage": "images/product6-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product7",
+    "name": "HI-GENKI C",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 3240,
+    "price": 3240,
+    "image": "images/product7.jpg",
+    "detailImage": "images/product7-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  }
+]
