@@ -5,7 +5,7 @@
     "category": "HEAL SELECT",
     "shortDescription": "商品についての短い説明文を入れます。",
     "listPrice": 19800,
-    "price": 19000,
+    "price": 19800,
     "image": "images/product1.jpeg",
     "detailImage": "images/product1.jpeg",
     "detailImageClass": "",
@@ -206,6 +206,175 @@
     "price": 3240,
     "image": "images/product7.jpg",
     "detailImage": "images/product7-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+  {
+    "id": "product8",
+    "name": "HI-GENKI ビフィズス",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11664,
+    "price": 11664,
+    "image": "images/product8.jpg",
+    "detailImage": "images/product8-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+
+  {
+    "id": "product9",
+    "name": "HI-GENKI ビフィズス",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11664,
+    "price": 11664,
+    "image": "images/product9.jpg",
+    "detailImage": "images/product9-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+
+  {
+    "id": "product10",
+    "name": "HI-GENKI ビフィズス",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11664,
+    "price": 11664,
+    "image": "images/product10.jpg",
+    "detailImage": "images/product10-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+
+  {
+    "id": "product11",
+    "name": "HI-GENKI ビフィズス",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11664,
+    "price": 11664,
+    "image": "images/product11.jpg",
+    "detailImage": "images/product11-1.jpg",
+    "detailImageClass": "hi-genki-image",
+    "detailCategory": "heal SELECT ITEM",
+    "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
+    "sections": [
+      {
+        "heading": "商品の特徴",
+        "text": "ここに商品の詳しい説明を入れます。\n        商品の特徴やおすすめポイント、\n        どのような方におすすめの商品なのかを\n        分かりやすく記載します。"
+      },
+      {
+        "heading": "内容量",
+        "text": "○○ml / ○○個入り"
+      },
+      {
+        "heading": "ご使用方法",
+        "text": "商品の使用方法や飲み方などを\n        ここに記載します。"
+      },
+      {
+        "heading": "ご注意",
+        "text": "使用上の注意事項などがある場合は\n        こちらへ記載します。"
+      }
+    ],
+    "stripeUrl": "",
+    "published": true
+  },
+
+  {
+    "id": "product12",
+    "name": "HI-GENKI ビフィズス",
+    "category": "HEAL SELECT",
+    "shortDescription": "商品についての短い説明文を入れます。",
+    "listPrice": 11664,
+    "price": 11664,
+    "image": "images/product12.jpg",
+    "detailImage": "images/product12-1.jpg",
     "detailImageClass": "hi-genki-image",
     "detailCategory": "heal SELECT ITEM",
     "intro": "商品の特徴が一目で分かるような\n        短い紹介文をここに入れます。",
