@@ -240,6 +240,7 @@
     "image": "images/product8.jpg",
     "detailImage": "images/product8.jpg",
     "detailImages": [
+      "images/product8.jpg",
       "images/product8-1.jpg",
       "images/product8-2.jpg",
       "images/product8-3.jpg"
