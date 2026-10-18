@@ -24,6 +24,18 @@ function renderDetail(products){
  if(p.price==null) document.querySelector('#detail-product-price').textContent='価格お問い合わせ';
  else document.querySelector('#detail-product-price').replaceChildren(document.createTextNode(yen(p.price)+' '),element('span','','税込'));
  document.querySelector('#detail-product-intro').textContent=p.intro||'';
+ // カラー選択欄は、colorOptions を設定した商品だけに表示します。
+ const oldColor=document.querySelector('#detail-product-color'); if(oldColor) oldColor.remove();
+ if(Array.isArray(p.colorOptions) && p.colorOptions.length){
+  const wrap=element('div','detail-color-selector'); wrap.id='detail-product-color';
+  const label=element('label','detail-color-label','カラーを選択'); label.htmlFor='detail-color-choice';
+  const select=element('select','detail-color-choice'); select.id='detail-color-choice'; select.name='color'; select.required=true;
+  const placeholder=element('option','','カラーを選択してください'); placeholder.value=''; placeholder.disabled=true; placeholder.selected=true; select.append(placeholder);
+  for(const color of p.colorOptions){const option=element('option','',color);option.value=color;select.append(option);}
+  wrap.append(label,select);
+  document.querySelector('#detail-product-buy').before(wrap);
+ }
+
  document.querySelector('#detail-product-category').textContent=p.detailCategory||'heal SELECT ITEM';
  const contents=document.querySelector('#detail-product-sections'); contents.replaceChildren();
  for(const part of (p.sections||[])){contents.append(element('h3','',part.heading),element('p','',part.text));}

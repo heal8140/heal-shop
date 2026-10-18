@@ -1280,3 +1280,9 @@ footer {
   background: #A78A5B;
   color: white;
 }
+
+/* 商品のカラー選択（設定がある商品だけ表示） */
+.detail-color-selector { margin-top: 24px; }
+.detail-color-label { display: block; margin-bottom: 10px; font-size: 12px; color: #68625b; }
+.detail-color-choice { width: 100%; padding: 13px 14px; border: 1px solid #ddd7cd; border-radius: 0; background: #fff; color: #302b26; font: inherit; font-size: 13px; }
+.detail-color-choice:focus-visible { outline: 2px solid #a78a5b; outline-offset: 2px; }
