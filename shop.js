@@ -36,6 +36,18 @@ function renderDetail(products){
   document.querySelector('#detail-product-buy').before(wrap);
  }
 
+ // 長さ選択欄は、sizeOptions を設定した商品だけに表示します。
+ const oldSize=document.querySelector('#detail-product-size'); if(oldSize) oldSize.remove();
+ if(Array.isArray(p.sizeOptions) && p.sizeOptions.length){
+  const wrap=element('div','detail-color-selector'); wrap.id='detail-product-size';
+  const label=element('label','detail-color-label','長さを選択'); label.htmlFor='detail-size-choice';
+  const select=element('select','detail-color-choice'); select.id='detail-size-choice'; select.name='size'; select.required=true;
+  const placeholder=element('option','','長さを選択してください'); placeholder.value=''; placeholder.disabled=true; placeholder.selected=true; select.append(placeholder);
+  for(const size of p.sizeOptions){const option=element('option','',size);option.value=size;select.append(option);}
+  wrap.append(label,select);
+  document.querySelector('#detail-product-buy').before(wrap);
+ }
+
  document.querySelector('#detail-product-category').textContent=p.detailCategory||'heal SELECT ITEM';
  const contents=document.querySelector('#detail-product-sections'); contents.replaceChildren();
  for(const part of (p.sections||[])){contents.append(element('h3','',part.heading),element('p','',part.text));}
