@@ -238,7 +238,12 @@
     "listPrice": 33000,
     "price": 33000,
     "image": "images/product8.jpg",
-    "detailImage": "images/product8-1.jpg",
+    "detailImage": "images/product8.jpg",
+    "detailImages": [
+      "images/product8-1.jpg",
+      "images/product8-2.jpg",
+      "images/product8-3.jpg"
+    ],
     "detailImageClass": "hi-genki-image",
     "detailCategory": "heal SELECT ITEM",
     "intro": "毎日身につけたくなる、シンプルで上品な牛革ネックレス。\n        普段着からお出かけまで、さまざまな装いに自然となじみます。\n        ホワイトとブラックの2色、45cmと50cmの長さからお選びいただけます。",
