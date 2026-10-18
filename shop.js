@@ -21,6 +21,32 @@ function renderDetail(products){
  document.title=p.name+' | heal ONLINE SHOP'; title.textContent=p.name;
  const img=document.querySelector('#detail-product-image'); img.src=p.detailImage||p.image; img.alt=p.name;
  document.querySelector('#detail-product-image-wrap').className='detail-image'+(p.detailImageClass?' '+p.detailImageClass:'');
+  // detailImages がある商品にだけサムネイル式の画像切替を表示します。
+  const imageWrap=document.querySelector('#detail-product-image-wrap');
+  const oldGallery=imageWrap.querySelector('.detail-image-thumbnails');
+  if(oldGallery) oldGallery.remove();
+  imageWrap.classList.remove('has-image-gallery');
+  const galleryImages=Array.isArray(p.detailImages)?p.detailImages.filter(src=>typeof src==='string' && src.trim()):[];
+  if(galleryImages.length){
+    imageWrap.classList.add('has-image-gallery');
+    img.src=galleryImages[0];
+    const thumbnails=element('div','detail-image-thumbnails');
+    galleryImages.forEach((src,i)=>{
+      const button=element('button','detail-image-thumbnail'+(i===0?' is-active':''));
+      button.type='button'; button.setAttribute('aria-label','商品画像 '+(i+1)+' を表示');
+      button.setAttribute('aria-pressed',i===0?'true':'false');
+      const thumb=element('img'); thumb.src=src; thumb.alt=p.name+' 画像 '+(i+1); thumb.loading='lazy';
+      button.append(thumb);
+      button.addEventListener('click',()=>{
+        img.src=src;
+        thumbnails.querySelectorAll('button').forEach(b=>{b.classList.remove('is-active');b.setAttribute('aria-pressed','false');});
+        button.classList.add('is-active'); button.setAttribute('aria-pressed','true');
+      });
+      thumbnails.append(button);
+    });
+    imageWrap.append(thumbnails);
+  }
+
  if(p.price==null) document.querySelector('#detail-product-price').textContent='価格お問い合わせ';
  else document.querySelector('#detail-product-price').replaceChildren(document.createTextNode(yen(p.price)+' '),element('span','','税込'));
  document.querySelector('#detail-product-intro').textContent=p.intro||'';

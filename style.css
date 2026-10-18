@@ -1286,3 +1286,35 @@ footer {
 .detail-color-label { display: block; margin-bottom: 10px; font-size: 12px; color: #68625b; }
 .detail-color-choice { width: 100%; padding: 13px 14px; border: 1px solid #ddd7cd; border-radius: 0; background: #fff; color: #302b26; font: inherit; font-size: 13px; }
 .detail-color-choice:focus-visible { outline: 2px solid #a78a5b; outline-offset: 2px; }
+
+/* 複数画像のある商品だけに適用。既存の商品レイアウトは維持します。 */
+.detail-image.has-image-gallery {
+  flex-direction: column;
+  gap: 16px;
+}
+.detail-image-thumbnails {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.detail-image-thumbnail {
+  width: 68px;
+  height: 68px;
+  padding: 4px;
+  border: 1px solid #ddd5ca;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.detail-image-thumbnail.is-active { border: 2px solid #a78a5b; }
+.detail-image-thumbnail:focus-visible { outline: 2px solid #302b26; outline-offset: 2px; }
+.detail-image.has-image-gallery .detail-image-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
