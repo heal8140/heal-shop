@@ -1,6 +1,13 @@
 /* 商品の編集は products.json のみでOK。GitHub Pages対応・サーバー不要。 */
 const yen = value => '¥' + Number(value).toLocaleString('ja-JP');
 const element = (tag, className, text) => { const el=document.createElement(tag); if(className) el.className=className; if(text!==undefined) el.textContent=text; return el; };
+
+// 商品説明内の <br> のみを改行として表示する。
+function setTextWithBreaks(target, value){
+ const parts=String(value||'').split(/<br\s*\/?>/gi);
+ target.replaceChildren();
+ parts.forEach((part,index)=>{if(index) target.append(document.createElement('br'));target.append(document.createTextNode(part));});
+}
 async function loadProducts(){ const res=await fetch('products.json',{cache:'no-cache'}); if(!res.ok) throw new Error('商品の読み込みに失敗しました'); return await res.json(); }
 function renderListing(products){
  const grid=document.querySelector('#product-grid'); if(!grid)return;
@@ -49,7 +56,7 @@ function renderDetail(products){
 
  if(p.price==null) document.querySelector('#detail-product-price').textContent='価格お問い合わせ';
  else document.querySelector('#detail-product-price').replaceChildren(document.createTextNode(yen(p.price)+' '),element('span','','税込'));
- document.querySelector('#detail-product-intro').textContent=p.intro||'';
+ setTextWithBreaks(document.querySelector('#detail-product-intro'),p.intro||'');
  // カラー選択欄は、colorOptions を設定した商品だけに表示します。
  const oldColor=document.querySelector('#detail-product-color'); if(oldColor) oldColor.remove();
  if(Array.isArray(p.colorOptions) && p.colorOptions.length){
@@ -76,7 +83,7 @@ function renderDetail(products){
 
  document.querySelector('#detail-product-category').textContent=p.detailCategory||'heal SELECT ITEM';
  const contents=document.querySelector('#detail-product-sections'); contents.replaceChildren();
- for(const part of (p.sections||[])){contents.append(element('h3','',part.heading),element('p','',part.text));}
+ for(const part of (p.sections||[])){const description=element('p','');setTextWithBreaks(description,part.text);contents.append(element('h3','',part.heading),description);}
  const pdfArea=document.querySelector('#detail-product-pdfs');
  if(pdfArea){
   pdfArea.replaceChildren();
