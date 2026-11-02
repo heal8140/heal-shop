@@ -96,7 +96,32 @@ function renderDetail(products){
   pdfArea.hidden=pdfArea.childElementCount===0;
  }
  const buy=document.querySelector('#detail-product-buy'), note=document.querySelector('#detail-product-stripe-note');
- if(p.price!=null && p.stripeUrl && /^https:\/\//i.test(p.stripeUrl)) {buy.href=p.stripeUrl;buy.removeAttribute('aria-disabled');note.textContent='安全なStripe決済ページへ移動します。';}
- else {buy.href='#';buy.setAttribute('aria-disabled','true');buy.addEventListener('click',e=>e.preventDefault());note.textContent='決済リンクは準備中です。';}
+ // 商品ごとに設定された販売単位（箱／ばら売り等）だけ表示します。
+ // saleOptions のない既存商品は、従来の価格・決済リンクの動作を維持します。
+ function applyPriceAndBuy(price, stripeUrl){
+  const priceEl=document.querySelector('#detail-product-price');
+  if(price==null) priceEl.textContent='価格お問い合わせ';
+  else priceEl.replaceChildren(document.createTextNode(yen(price)+' '),element('span','','税込'));
+  if(price!=null && typeof stripeUrl==='string' && /^https:\/\//i.test(stripeUrl)){
+   buy.href=stripeUrl; buy.removeAttribute('aria-disabled');
+   note.textContent='安全なStripe決済ページへ移動します。';
+  } else {
+   buy.href='#'; buy.setAttribute('aria-disabled','true');
+   note.textContent='決済リンクは準備中です。';
+  }
+ }
+ buy.addEventListener('click',e=>{if(buy.getAttribute('aria-disabled')==='true')e.preventDefault();});
+ const saleOptions=Array.isArray(p.saleOptions)?p.saleOptions.filter(v=>v && typeof v.label==='string' && Number.isFinite(v.price)):[];
+ if(saleOptions.length){
+  const wrap=element('div','detail-color-selector');wrap.id='detail-product-sale-options';
+  const label=element('label','detail-color-label','販売単位を選択');label.htmlFor='detail-sale-choice';
+  const select=element('select','detail-color-choice');select.id='detail-sale-choice';select.name='sale-option';
+  saleOptions.forEach((v,i)=>{const option=element('option','',v.label);option.value=String(i);select.append(option);});
+  wrap.append(label,select);buy.before(wrap);
+  const onChoice=()=>{const v=saleOptions[Number(select.value)];applyPriceAndBuy(v.price,v.stripeUrl||'');};
+  select.addEventListener('change',onChoice);onChoice();
+ } else {
+  applyPriceAndBuy(p.price,p.stripeUrl);
+ }
 }
 (async()=>{try{const products=await loadProducts();renderListing(products);renderDetail(products);}catch(err){const grid=document.querySelector('#product-grid');if(grid)grid.textContent='商品の読み込みに失敗しました。公開サイトで再読み込みしてください。';const title=document.querySelector('#detail-product-name');if(title)title.textContent='商品の読み込みに失敗しました。';console.error(err);}})();
