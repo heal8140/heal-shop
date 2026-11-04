@@ -9,8 +9,8 @@ function setTextWithBreaks(target, value){
  parts.forEach((part,index)=>{if(index) target.append(document.createElement('br'));target.append(document.createTextNode(part));});
 }
 async function loadProducts(){ const res=await fetch('products.json',{cache:'no-cache'}); if(!res.ok) throw new Error('商品の読み込みに失敗しました'); return await res.json(); }
-function renderListing(products){
- const grid=document.querySelector('#product-grid'); if(!grid)return;
+function renderListing(products, selector='#product-grid'){
+ const grid=document.querySelector(selector); if(!grid)return;
  grid.replaceChildren();
  for(const p of products.filter(p=>p.published!==false)){
   const a=element('a','product-card'); a.href='product.html?id='+encodeURIComponent(p.id);
@@ -26,6 +26,7 @@ function renderDetail(products){
  const id=new URLSearchParams(location.search).get('id'); const p=products.find(p=>p.id===id && p.published!==false);
  if(!p){title.textContent='商品が見つかりません';document.querySelector('.product-detail-inner').querySelector('.detail-image').style.display='none'; document.querySelector('.detail-description').style.display='none';return;}
  document.title=p.name+' | heal ONLINE SHOP'; title.textContent=p.name;
+ const crumb=document.querySelector('#breadcrumb-current');if(crumb)crumb.textContent=p.name;
  const img=document.querySelector('#detail-product-image'); img.src=p.detailImage||p.image; img.alt=p.name;
  document.querySelector('#detail-product-image-wrap').className='detail-image'+(p.detailImageClass?' '+p.detailImageClass:'');
   // detailImages がある商品にだけサムネイル式の画像切替を表示します。
@@ -124,4 +125,7 @@ function renderDetail(products){
   applyPriceAndBuy(p.price,p.stripeUrl);
  }
 }
-(async()=>{try{const products=await loadProducts();renderListing(products);renderDetail(products);}catch(err){const grid=document.querySelector('#product-grid');if(grid)grid.textContent='商品の読み込みに失敗しました。公開サイトで再読み込みしてください。';const title=document.querySelector('#detail-product-name');if(title)title.textContent='商品の読み込みに失敗しました。';console.error(err);}})();
+(async()=>{try{const products=await loadProducts();renderListing(products);
+ const current=document.body.dataset.category;
+ if(current){const matching=products.filter(p=>Array.isArray(p.purposeCategories)&&p.purposeCategories.includes(current));renderListing(matching,'#category-product-grid');const count=document.querySelector('#category-item-count');if(count)count.textContent=matching.filter(p=>p.published!==false).length+' items';const categoryGrid=document.querySelector('#category-product-grid');if(categoryGrid && !categoryGrid.childElementCount)categoryGrid.append(element('p','category-empty','このカテゴリーの商品は現在準備中です。'));}
+ renderDetail(products);}catch(err){const grid=document.querySelector('#product-grid')||document.querySelector('#category-product-grid');if(grid)grid.textContent='商品の読み込みに失敗しました。公開サイトで再読み込みしてください。';const title=document.querySelector('#detail-product-name');if(title)title.textContent='商品の読み込みに失敗しました。';console.error(err);}})();

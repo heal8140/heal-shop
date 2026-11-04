@@ -30,7 +30,12 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "beauty",
+      "water"
+    ]
   },
   {
     "id": "product3",
@@ -63,7 +68,11 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "water"
+    ]
   },
   {
     "id": "product2",
@@ -97,9 +106,13 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "beauty",
+      "water"
+    ]
   },
-  
   {
     "id": "product4",
     "name": "HI-GENKI ビフィズス 乳酸菌プラス",
@@ -131,7 +144,11 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "nutrition"
+    ]
   },
   {
     "id": "product5",
@@ -164,7 +181,13 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "beauty",
+      "refresh",
+      "nutrition"
+    ]
   },
   {
     "id": "product6",
@@ -197,7 +220,12 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "refresh",
+      "nutrition"
+    ]
   },
   {
     "id": "product7",
@@ -230,7 +258,13 @@
       }
     ],
     "stripeUrl": "",
-    "published": true
+    "published": true,
+    "purposeCategories": [
+      "health",
+      "beauty",
+      "refresh",
+      "nutrition"
+    ]
   },
   {
     "id": "product8",
@@ -277,6 +311,9 @@
     "sizeOptions": [
       "45cm",
       "50cm"
+    ],
+    "purposeCategories": [
+      "environment"
     ]
   },
   {
@@ -330,6 +367,10 @@
         "label": "商品資料（PDF）を見る",
         "url": "pdf/product9.pdf"
       }
+    ],
+    "purposeCategories": [
+      "environment",
+      "sleep"
     ]
   },
   {
@@ -395,6 +436,10 @@
         "label": "商品資料（裏面PDF）を見る",
         "url": "pdf/product10-2.pdf"
       }
+    ],
+    "purposeCategories": [
+      "health",
+      "water"
     ]
   },
   {
@@ -448,6 +493,9 @@
         "label": "商品資料（PDF）を見る",
         "url": "pdf/product11.pdf"
       }
+    ],
+    "purposeCategories": [
+      "environment"
     ]
   },
   {
@@ -493,6 +541,11 @@
         "price": 200,
         "stripeUrl": ""
       }
+    ],
+    "purposeCategories": [
+      "health",
+      "refresh",
+      "nutrition"
     ]
   }
 ]
