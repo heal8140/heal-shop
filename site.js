@@ -1,6 +1,15 @@
 /* 共通ナビゲーションとカテゴリー表示。カテゴリー名・画像の編集は HEAL_CATEGORIES で行います。 */
 const HEAL_CATEGORIES = [
   {
+    "id": "care",
+    "name": "癌などの闘病中の方",
+    "short": "日々を、ご自身のペースで。",
+    "description": "治療中や療養中の暮らしを大切にしたい方へ。日々を心地よく過ごすためのアイテムをご紹介します。",
+    "image": "images/category-care.svg",
+    "tone": "care",
+    "tagline": "GENTLE EVERYDAY CARE"
+  },
+  {
     "id": "health",
     "name": "健康維持・体調管理",
     "short": "毎日を、自分らしく。",
@@ -103,7 +112,7 @@ function renderCategoryCards(){
  for(let i=0;i<HEAL_CATEGORIES.length;i++){
   const c=HEAL_CATEGORIES[i],a=node('a','category-card category-card--'+c.tone+(i===0?' category-card--lead':''));a.href=categoryUrl(c.id);a.setAttribute('aria-label',c.name+'の商品一覧を見る');
   const figure=node('div','category-card-visual');const img=node('img');img.src=c.image;img.alt='';img.loading='lazy';figure.append(img);
-  const content=node('div','category-card-content');content.append(node('span','category-card-index',String(i+1).padStart(2,'0')+' / 07'),node('h3','',c.name),node('p','',c.short));
+  const content=node('div','category-card-content');content.append(node('span','category-card-index',String(i+1).padStart(2,'0')+' / '+String(HEAL_CATEGORIES.length).padStart(2,'0')),node('h3','',c.name),node('p','',c.short));
   const arrow=node('span','category-card-arrow','↗');arrow.setAttribute('aria-hidden','true');
   a.append(figure,content,arrow);grid.append(a);
  }

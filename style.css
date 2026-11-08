@@ -1329,7 +1329,7 @@ body.menu-open{overflow:hidden}
 .section-inner{width:min(1200px,91%)}
 :target{scroll-margin-top:156px}
 a:focus-visible,button:focus-visible{outline:2px solid #8e744f;outline-offset:4px}
-/* pc header: brand & utility links / 7 purpose links */
+/* pc header: brand & utility links / 8 purpose links */
 .site-header{position:sticky;top:0;z-index:1000;background:rgba(250,248,243,.98)}
 .header-upper{border-bottom:1px solid var(--border)}
 .header-inner{min-height:78px;width:min(1250px,93%);gap:20px}
@@ -1337,7 +1337,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8e744f;outline-offset:4p
 .header-links a{font-size:12px;letter-spacing:.08em;color:#5f574d;padding:9px 0}
 .header-links a::after{bottom:4px}
 .category-navigation{display:block}
-.category-navigation-inner{width:min(1250px,98%);margin:0 auto;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));align-items:stretch}
+.category-navigation-inner{width:min(1250px,98%);margin:0 auto;display:grid;grid-template-columns:repeat(8,minmax(0,1fr));align-items:stretch}
 .category-nav-link{min-height:58px;padding:10px 6px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;line-height:1.45;letter-spacing:.01em;font-weight:600;color:#5e574d;border-right:1px solid #eee8df;transition:background .2s,color .2s;position:relative}
 .category-nav-link:first-child{border-left:1px solid #eee8df}
 .category-nav-link:hover,.category-nav-link.is-current{background:#eee8dd;color:#534329}
@@ -1373,6 +1373,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8e744f;outline-offset:4p
 .category-card-content h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:19px;line-height:1.5;font-weight:600;margin:14px 0 7px;max-width:220px}
 .category-card-content p{font-size:11px;line-height:1.7;color:#766d63;margin:0}
 .category-card-arrow{z-index:3;position:absolute;bottom:17px;right:20px;border:1px solid #aa9779;width:29px;height:29px;border-radius:50%;display:grid;place-items:center;color:#786349;background:rgba(255,255,255,.55)}
+.category-card--care{background:#e8ede6}.category-card--care .category-card-visual::before{background:linear-gradient(90deg,#e8ede6 2%,rgba(232,237,230,.1) 75%)}
 .category-card--sage{background:#eaece2}.category-card--sage .category-card-visual::before{background:linear-gradient(90deg,#eaece2 2%,rgba(234,236,226,.1) 75%)}
 .category-card--rose{background:#f1e8e4}.category-card--rose .category-card-visual::before{background:linear-gradient(90deg,#f1e8e4 2%,rgba(241,232,228,.1) 75%)}
 .category-card--stone{background:#e8e5de}.category-card--stone .category-card-visual::before{background:linear-gradient(90deg,#e8e5de 2%,rgba(232,229,222,.1) 75%)}
@@ -1396,7 +1397,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #8e744f;outline-offset:4p
 .category-hero-down span{margin-left:10px}
 .category-hero-visual{max-height:300px;overflow:hidden;aspect-ratio:1.55/1;background:rgba(255,255,255,.3);border:10px solid rgba(255,255,255,.3)}
 .category-hero-visual img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
-.category-hero--sage{background:#e9eee6}.category-hero--rose{background:#f1e9e6}.category-hero--stone{background:#eae7df}.category-hero--amber{background:#f2eadf}.category-hero--lavender{background:#efedf1}.category-hero--blue{background:#e7eff2}.category-hero--olive{background:#eceee5}
+.category-hero--care{background:#e8ede6}.category-hero--sage{background:#e9eee6}.category-hero--rose{background:#f1e9e6}.category-hero--stone{background:#eae7df}.category-hero--amber{background:#f2eadf}.category-hero--lavender{background:#efedf1}.category-hero--blue{background:#e7eff2}.category-hero--olive{background:#eceee5}
 .category-items{padding:90px 0 110px}.category-empty{font-size:13px;color:#776d61}
 .browse-more{padding:80px 0 100px;background:#f0ebe2}.browse-more-header{text-align:center;margin-bottom:34px}
 .category-mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
